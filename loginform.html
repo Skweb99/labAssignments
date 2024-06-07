@@ -1,0 +1,68 @@
+<html>
+<!DOCTYPE html>    
+<head>
+    <title>Login page </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(156, 174, 94);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 19px;
+            background-color: rgb(114, 131, 197);
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+           .login {
+            background-color: #890778;
+            color: rgb(7, 240, 19);
+            padding: 16px 20px;
+            margin: 10px 0;
+            border: rgb(64, 174, 64) 20px;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+       
+
+        .signin {
+            background-color: #c9654f;
+            text-align: center;
+        }
+    </style>
+</head>    
+<body>    
+     <h1> Student Login Form </h1>  
+    <form>  
+        <div class="container">   
+            <label for="user">Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" id="user" required>  
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <button type="submit" class="login">Login</button>   
+            <input type="checkbox" checked="checked"> Remember me   
+           <br><br>
+            <a href="#">  forgot password? </a> 
+            <br>
+            <br> 
+            </a> 
+            </div>
+            <div class="container signin">
+                <a href="registrationform.html">Back to registration</a>
+            </div>   
+    </form>     
+</body>     
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student Record Form</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<h2>Student Record Form</h2>
+
+<form id="studentForm" onsubmit="return validateForm()">
+    <label for="studentName">Name:</label><br>
+    <input type="text" id="studentName" name="studentName"><br>
+    <span id="nameError" class="error"></span><br>
+
+    <label for="studentAge">Age:</label><br>
+    <input type="number" id="studentAge" name="studentAge"><br>
+    <span id="ageError" class="error"></span><br>
+
+    <label for="studentGrade">Grade:</label><br>
+    <input type="text" id="studentGrade" name="studentGrade"><br>
+    <span id="gradeError" class="error"></span><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateForm() {
+    var name = document.getElementById("studentName").value;
+    var age = document.getElementById("studentAge").value;
+    var grade = document.getElementById("studentGrade").value;
+
+    var nameError = document.getElementById("nameError");
+    var ageError = document.getElementById("ageError");
+    var gradeError = document.getElementById("gradeError");
+
+    var isValid = true;
+
+    // Validate Name
+    if (name === "") {
+        nameError.textContent = "Name is required";
+        isValid = false;
+    } else {
+        nameError.textContent = "";
+    }
+
+    // Validate Age
+    if (age === "" || isNaN(age) || age < 0 || age > 150) {
+        ageError.textContent = "Enter a valid age";
+        isValid = false;
+    } else {
+        ageError.textContent = "";
+    }
+
+    // Validate Grade
+    if (grade === "") {
+        gradeError.textContent = "Grade is required";
+        isValid = false;
+    } else {
+        gradeError.textContent = "";
+    }
+
+    return isValid;
+}
+</script>
+
+</body>
+</html>
